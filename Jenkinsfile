@@ -1,7 +1,12 @@
 #!/usr/bin/env groovy
 
 pipeline {
-
+agent {
+        docker {
+            image 'ubuntu'
+            args '-u root'
+        }
+    }
 
 
     stages {
