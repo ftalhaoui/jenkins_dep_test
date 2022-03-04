@@ -12,7 +12,11 @@ pipeline {
         //     }
         // }
         stage(' build') {
-            sh 'docker build -t ferestalhaoui/hachicha:${env.BUILD_ID} --file $WORKSPACE/Dockerfile '
+            agent any
+            steps {
+                sh 'docker build -t ferestalhaoui/hachicha:${env.BUILD_ID} --file $WORKSPACE/Dockerfile '
+          
+            }
         }
     }
 }
