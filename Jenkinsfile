@@ -19,12 +19,22 @@
 //         }
 //     }
 // }
+// pipeline {
+//     agent any
+//     stages {
+//         stage('Test') {
+//             steps {
+//                 sh 'ls -ls ./test.txt'
+//             }
+//         }
+//     }
+// }
 pipeline {
-    agent any
+    agent {dockerfile true }
     stages {
-        stage('Test') {
+        stage('Docker Build Test ') {
             steps {
-                sh 'ls -ls ./test.txt'
+                sh 'echo /home/test.txt'
             }
         }
     }
