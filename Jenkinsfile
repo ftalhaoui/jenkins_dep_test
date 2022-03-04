@@ -34,7 +34,7 @@ pipeline {
     stages {
         stage('Docker Build Test ') {
             steps {
-                sh 'echo /home/test.txt'
+                sh 'cat /home/test.txt'
             }
         }
     }
