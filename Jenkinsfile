@@ -14,7 +14,7 @@ pipeline {
         stage(' build') {
             agent any
             steps {
-                sh "docker build ."
+                sh "docker build -t ggfg:dev ."
             }
         }
     }
