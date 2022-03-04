@@ -14,8 +14,8 @@ pipeline {
         stage(' build') {
             agent any
             steps {
-                sh 'docker build -t ferestalhaoui/hachicha:${env.BUILD_ID} --file $WORKSPACE/Dockerfile '
-          
+              //  sh 'docker build -t ferestalhaoui/hachicha:${env.BUILD_ID} --file $WORKSPACE/Dockerfile '
+                echo '$WORKSPACE'
             }
         }
     }
