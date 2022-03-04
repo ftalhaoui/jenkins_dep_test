@@ -24,7 +24,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'date'
+                sh 'ls -ls ./test.txt'
             }
         }
     }
