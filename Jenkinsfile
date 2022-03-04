@@ -15,7 +15,7 @@ pipeline {
             agent any
             steps {
                 echo "${env.BUILD_ID}"
-                echo "$DOCKER_IMAGE"
+                echo "DOCKER_IMAGE"
             }
         }
     }
