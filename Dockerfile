@@ -1,3 +1,3 @@
 FROM ferestalhaoui/dev_hachicha:dev
-WORKDIR /home
-COPY test.txt /home
+WORKDIR /var/www/html
+COPY index.html /var/www/html
