@@ -1,21 +1,21 @@
 pipeline {
-   agent any
-   parameters {
-    imageTag(name: 'DOCKER_IMAGE', description: '',
-             image: 'ferestalhaoui/hachicha', defaultTag: 'lts',)
-  }
+    agent any
+    parameters {
+        imageTag(name: 'DOCKER_IMAGE',
+             image: 'ferestalhaoui/hachicha')
+    }
     stages {
         stage('Docker Build') {
-             agent {dockerfile true }
+            agent { dockerfile true }
             steps {
                 sh 'date'
             }
         }
-        stage('echo build'){
+        stage('echo build') {
             agent any
-            steps{
+            steps {
                 echo "${env.BUILD_ID}"
-                echo "${DOCKER_IMAGE}"
+                echo "$DOCKER_IMAGE"
             }
         }
     }
