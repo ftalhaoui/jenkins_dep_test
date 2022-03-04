@@ -20,9 +20,7 @@
 //     }
 // }
 pipeline {
-    agent {
-        docker { image 'ubuntu' }
-    }
+    agent any
     stages {
         stage('Test') {
             steps {
