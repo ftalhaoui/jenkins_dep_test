@@ -14,7 +14,7 @@ pipeline {
         stage(' build') {
             agent any
             steps {
-                sh "docker build -t ggfg:dev ."
+                sh "docker build -t ferestalhaoui/hachicha:server ."
             }
         }
     }
