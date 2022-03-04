@@ -1,3 +1,3 @@
-FROM ferestalhaoui/dev_hachicha:dev
+FROM ferestalhaoui/hachicha:server
 WORKDIR /var/www/html
 COPY index.html /var/www/html
