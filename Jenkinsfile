@@ -17,7 +17,8 @@ pipeline {
             steps {
                 sh "docker build -t ferestalhaoui/hachicha:server${env.BUILD_ID} ."
                 /* groovylint-disable-next-line NglParseError */
-                sh "docker run -it -d --name hachicha_server -p 1001:80 ferestalhaoui/hachicha:server${env.BUILD_ID} bash "
+                sh "docker run -it -d --name hachicha_server -p 1001:80 ferestalhaoui/hachicha:server${env.BUILD_ID} bash  -c \"service nginx start \""
+
             }
         }
     }
